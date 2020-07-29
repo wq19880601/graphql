@@ -118,8 +118,8 @@ func (c *Client) runWithJSON(ctx context.Context, req *Request, resp interface{}
 		return err
 	}
 	r.Close = c.closeReq
-	r.Header.Set("Content-Type", "application/json; charset=utf-8")
-	r.Header.Set("Accept", "application/json; charset=utf-8")
+	// r.Header.Set("Content-Type", "application/json; charset=utf-8")
+	// r.Header.Set("Accept", "application/json; charset=utf-8")
 	for key, values := range req.Header {
 		for _, value := range values {
 			r.Header.Add(key, value)
